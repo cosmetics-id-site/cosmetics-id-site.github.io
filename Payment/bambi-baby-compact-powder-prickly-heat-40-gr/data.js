@@ -30,17 +30,16 @@ function submitForm(e) {
   var Last_name = getInputVal('Last_name');
   var email = getInputVal('email');
   var phone = getInputVal('phone');
-  var country = getInputVal('country');
-  var house = getInputVal('house');
-  var house_2 = getInputVal('house_2');
-  var kota = getInputVal('kota');
-  var state = getInputVal('state');
+  var Provinsi = getInputVal('Provinsi');
+  var Kota = getInputVal('Kota');
+  var Kecamatan = getInputVal('Kecamatan');
+  var sebagai = getInputVal('sebagai');
   var zip = getInputVal('zip');
   var note = getInputVal('note');
   var copuon = getInputVal('copuon');
 
   // Save message
-  saveMessage(First_name, Last_name, email, phone, country, house, house_2, kota, state, zip, note, copuon);
+  saveMessage(First_name, Last_name, email, phone, Provinsi, Kota, Kecamatan, sebagai, zip, note, copuon);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -60,18 +59,17 @@ function getInputVal(id) {
 }
 
 // Save message to firebase
-function saveMessage(First_name, Last_name, email, phone, country, house, house_2, kota, state, zip, note, copuon) {
+function saveMessage(First_name, Last_name, email, phone, Provinsi, Kota, Kecamatan, sebagai, zip, note, copuon) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     First_name: First_name,
     Last_name: Last_name,
     email: email,
     phone: phone,
-    country: country,
-    house: house,
-    house_2: house_2,
-    kota: kota,
-    state: state,
+    Provinsi: Provinsi,
+    Kota: Kota,
+    Kecamatan: Kecamatan,
+    sebagai: sebagai,
     zip: zip,
     note: note,
     copuon: copuon,

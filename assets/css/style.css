@@ -583,6 +583,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
+input[type="datetime-local"]:focus,
 textarea:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -603,6 +604,7 @@ input[type="text"],
 input[type="email"],
 input[type="number"],
 input[type="password"],
+input[type="datetime-local"],
 input[type="submit"],
 textarea {
   background-color: var(--white);
@@ -623,6 +625,7 @@ input[type="text"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="number"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder,
+input[type="datetime-local"]::-webkit-input-placeholder,
 input[type="submit"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -633,6 +636,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
+input[type="datetime-local"]:focus,
 textarea:focus {
   border-color: var(--ltn__secondary-color); }
 
