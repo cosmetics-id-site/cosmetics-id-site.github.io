@@ -1492,7 +1492,7 @@ const popupScreen = document.querySelector(".popup-screen");
         closeBtn.addEventListener("click", () => {
           popupScreen.classList.remove("active"); //Close the popup screen on click the close button.
           //Create a cookie for a day (to expire within a day) on click the close button.
-          document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; //1 day = 24 hours = 24*60*60
+          document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 00 * 00; //1 day = 24 hours = 24*60*60
         });
     
         //Use the created cookie to hide or show the popup screen.
