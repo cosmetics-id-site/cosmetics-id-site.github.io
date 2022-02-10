@@ -1477,9 +1477,33 @@ for(let i=0; i<toggles.length; i++){
 
 
 
+ /*-----------------
+            Share Copy
+        ------------------*/
+const copyBtn = document.querySelector(".copy-btn");
+        const textarea = document.querySelector("textarea");
+    
+        copyBtn.addEventListener("click", () => {
+          textarea.select();
+          document.execCommand("copy");
+          copyBtn.innerHTML = "<i class='fas fa-check'></i>";
+          copyBtn.style.background = "#2DCDA7";
+          copyBtn.style.color = "#fff";
+    
+          setTimeout(() => {
+            document.getSelection().removeAllRanges();
+            copyBtn.innerHTML = "<i class='fas fa-copy'></i>";
+            copyBtn.style.background = "";
+            copyBtn.style.color = "";
+          }, 5000);
+        });
 
 
-const popupScreen = document.querySelector(".popup-screen");
+
+        /*-----------------
+            Popup
+        ------------------*
+        const popupScreen = document.querySelector(".popup-screen");
         const popupBox = document.querySelector(".popup-box");
         const closeBtn = document.querySelector(".close-btn");
     
@@ -1504,25 +1528,3 @@ const popupScreen = document.querySelector(".popup-screen");
         else{
           popupScreen.style.display = "flex"; //Show the popup screen if the cookie is expired.
         }
-
-
- /*-----------------
-            Share Copy
-        ------------------*/
-const copyBtn = document.querySelector(".copy-btn");
-        const textarea = document.querySelector("textarea");
-    
-        copyBtn.addEventListener("click", () => {
-          textarea.select();
-          document.execCommand("copy");
-          copyBtn.innerHTML = "<i class='fas fa-check'></i>";
-          copyBtn.style.background = "#2DCDA7";
-          copyBtn.style.color = "#fff";
-    
-          setTimeout(() => {
-            document.getSelection().removeAllRanges();
-            copyBtn.innerHTML = "<i class='fas fa-copy'></i>";
-            copyBtn.style.background = "";
-            copyBtn.style.color = "";
-          }, 5000);
-        });
