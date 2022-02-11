@@ -1502,7 +1502,7 @@ const copyBtn = document.querySelector(".copy-btn");
 
         /*-----------------
             Popup
-        ------------------*
+        ------------------*/
         const popupScreen = document.querySelector(".popup-screen");
         const popupBox = document.querySelector(".popup-box");
         const closeBtn = document.querySelector(".close-btn");
