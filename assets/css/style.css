@@ -6921,7 +6921,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .ltn__shop-details-img-gallery {
   margin-bottom: 35px; }
   .ltn__shop-details-img-gallery img {
-    background-color: var(--white-8); }
+    background-color: var(--white-8);
+  pointer-events: none; }
 
 .ltn__shop-details-small-img {
   margin-top: 20px;
