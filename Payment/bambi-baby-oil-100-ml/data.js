@@ -35,11 +35,12 @@ function submitForm(e) {
   var Kecamatan = getInputVal('Kecamatan');
   var sebagai = getInputVal('sebagai');
   var zip = getInputVal('zip');
+  var Pembayaran_via = getInputVal('Pembayaran_via');
   var note = getInputVal('note');
   var Voucher = getInputVal('Voucher');
 
   // Save message
-  saveMessage(First_name, Last_name, email, phone, Provinsi, Kota, Kecamatan, sebagai, zip, note, Voucher);
+  saveMessage(First_name, Last_name, email, phone, Provinsi, Kota, Kecamatan, sebagai, zip, Pembayaran_via, note, Voucher);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -59,7 +60,7 @@ function getInputVal(id) {
 }
 
 // Save message to firebase
-function saveMessage(First_name, Last_name, email, phone, Provinsi, Kota, Kecamatan, sebagai, zip, note, Voucher) {
+function saveMessage(First_name, Last_name, email, phone, Provinsi, Kota, Kecamatan, sebagai, zip, Pembayaran_via, note, Voucher) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     First_name: First_name,
@@ -71,6 +72,7 @@ function saveMessage(First_name, Last_name, email, phone, Provinsi, Kota, Kecama
     Kecamatan: Kecamatan,
     sebagai: sebagai,
     zip: zip,
+    Pembayaran_via: Pembayaran_via,
     note: note,
     Voucher: Voucher,
   });
