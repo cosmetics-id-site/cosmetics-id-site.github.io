@@ -1,11 +1,6 @@
 {
     "name": "Glamary",
     "short_name": "Glamary",
-    "start_url": "index.html",
-    "display": "standalone",
-    "background_color": "#fdfdfd",
-    "theme_color": "#db4938",
-    "orientation": "portrait-primary",
     "icons": [
       {
         "src": "assets/img/icon-logo/icon-72x72.png",
@@ -39,5 +34,11 @@
         "src": "assets/img/icon-logo/icon-512x512.png",
         "type": "image/png", "sizes": "512x512"
       }
-    ]
+    ],
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "start_url": "/index.html/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
   }
