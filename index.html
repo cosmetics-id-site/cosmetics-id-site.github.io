@@ -32,6 +32,14 @@
     <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
     <meta name="theme-color" content="#db4938" />
 
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js');
+          });
+        }
+      </script>
+
     <!-- Place favicon.png in the root directory -->
     <link rel="shortcut icon" href="assets/img/glamary-logo.png" type="image/x-icon">
     <!-- Font Icons css -->
