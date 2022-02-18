@@ -19,28 +19,8 @@
     <meta property="og:description"
         content="Belanja Kebutuhan kosmetik Tidak Perlu Keluar Rumah. Beli Sekarang Hanya di Glamary! Beragam Metode Pembayaran. Belanja Aman & Terpercaya.">
 
-    <!-- ios support -->
-    <link rel="manifest" href="manifest.json" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-72x72.png" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-96x96.png" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-128x128.png" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-144x144.png" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-152x152.png" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-192x192.png" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-384x384.png" />
-    <link rel="apple-touch-icon" href="assets/img/icon-logo/icon-512x512.png" />
-    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
-    <meta name="theme-color" content="#db4938" />
-
-    <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js');
-          });
-        }
-      </script>
-
     <!-- Place favicon.png in the root directory -->
+    <link rel="manifest" href="./manifest.webmanifest">
     <link rel="shortcut icon" href="assets/img/glamary-logo.png" type="image/x-icon">
     <!-- Font Icons css -->
     <link rel="stylesheet" href="assets/css/font-icons.css">
@@ -2204,6 +2184,7 @@
     <script src="assets/js/plugins.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/index.js" type="module"></script>
 </body>
 
 </html>
