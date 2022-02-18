@@ -88,20 +88,21 @@
               <i class='bx bx-x'></i>
           </div>
           <br>
-<!--video-->
-              <video frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen style="border-radius: 10px;" width="320" height="240" controls controlsList="nodownload">
-                <source src="assets/Glamary.mp4" type="video/mp4">
-              </video>
-              <!--video-->
+<!-- partial:index.partial.html --
+<video id="my-video" class="video-js" controls preload="auto" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-setup='' loop>
+  <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type='video/mp4'>
+  </video>
+  <!-- partial -->
+  
 
           <h1 class="modal__title"></h1>
           <p class="modal__description"></p>
-<!--video--
+<!--video-->
+<form action="video/">
           <button class="modal__button modal__button-width">
               View status
           </button>
+          </form>
           <!--video--
 
           <button class="modal__button-link close-modal">
@@ -119,6 +120,7 @@
 
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
+
 
   </html>
   <!-- partial -->
