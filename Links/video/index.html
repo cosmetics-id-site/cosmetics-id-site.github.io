@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Glamary</title>
-  <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'><link rel="stylesheet" href="./style.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Glamary</title>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<video id="my-video" class="video-js" controls preload="auto" poster="https://www.glamary.store/Links/assets/Glamary.png" data-setup='' loop>
-<source src="https://www.glamary.store/Links/assets/Glamary.mp4" type='video/mp4'>
-</video>
-<!-- partial -->
-  <script src='https://vjs.zencdn.net/5.4.6/video.js'></script>
+   
+<div class="container">
+
+   <div class="main-video-container">
+      <video src="Glamary.mp4" loop controls class="main-video" controls controlsList="nodownload"></video>
+      <h3 class="main-vid-title">Welcome</h3>
+   </div>
+
+   <div class="video-list-container">
+
+      <div class="list active">
+         <h3 class="list-title">1 Video</h3>
+      </div>
+
+      <div class="list">
+         <video src="Glamary.mp4" class="list-video"></video>
+         <h3 class="list-title">Welcome</h3>
+      </div>
+
+   </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
