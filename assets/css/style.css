@@ -12812,3 +12812,38 @@ section{
     margin-top: 15px;
   }
 }
+
+
+.toast_container-coming {
+		width: 270px;
+		height: 40px;
+		left: 50%;
+		bottom: 0%;
+		position: fixed;
+		background: #424242;
+		color: #FFFFFF;
+		text-align: center;
+		padding-top: 7px;
+		border-radius: 15px;
+		opacity: .9;
+		transform: translate(-50%, -50%);
+		visibility: hidden;
+	}
+
+	@keyframes animation_toast {
+		0% {
+			opacity: 0;
+		}
+
+		30% {
+			opacity: 1;
+		}
+
+		60% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0;
+		}
+	}
