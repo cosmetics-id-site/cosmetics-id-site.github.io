@@ -1527,3 +1527,4 @@ const copyBtn = document.querySelector(".copy-btn");
         else{
           popupScreen.style.display = "flex"; //Show the popup screen if the cookie is expired.
         }
+        
