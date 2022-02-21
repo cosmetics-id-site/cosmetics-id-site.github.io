@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 // Reference messages collection
-var messagesRef = firebase.database().ref('Bambi Baby Powder Compact Prickly Heat 40gr ( PAYMENT 73.600)');
+var messagesRef = firebase.database().ref('(F-BB030) Bambi Baby Powder Compact Prickly Heat 40gr ( PAYMENT 73,600)');
 
 function reset() {
   document.getElementById("payment").reset();

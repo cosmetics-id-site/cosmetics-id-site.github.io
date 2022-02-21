@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 // Reference messages collection
-var messagesRef = firebase.database().ref('Bambi Baby Telon Balm 50ml ( PAYMENT 76,500)');
+var messagesRef = firebase.database().ref('(F-BB049) Bambi Baby Telon Balm 50ml ( PAYMENT 76,300)');
 
 function reset() {
   document.getElementById("payment").reset();

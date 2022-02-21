@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 // Reference messages collection
-var messagesRef = firebase.database().ref('Bambi Baby Minyak Kayu Putih 60 Ml ( PAYMENT 35,000)');
+var messagesRef = firebase.database().ref('(F-BB026) Bambi Baby Minyak Kayu Putih 60 Ml ( PAYMENT 34,700)');
 
 function reset() {
   document.getElementById("payment").reset();

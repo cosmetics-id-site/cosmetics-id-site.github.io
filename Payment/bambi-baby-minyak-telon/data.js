@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 // Reference messages collection
-var messagesRef = firebase.database().ref('Bambi Baby Minyak Telon 60 Ml ( PAYMENT 32,000)');
+var messagesRef = firebase.database().ref('(F-BB015) Bambi Baby Minyak Telon 60 Ml ( PAYMENT 31,900)');
 
 function reset() {
   document.getElementById("payment").reset();

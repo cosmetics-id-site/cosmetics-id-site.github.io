@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 // Reference messages collection
-var messagesRef = firebase.database().ref('Bambi Baby Oil 100 Ml ( PAYMENT 31,500)');
+var messagesRef = firebase.database().ref('(F-BB009) Bambi Baby Oil 100 Ml ( PAYMENT 31,200)');
 
 function reset() {
   document.getElementById("payment").reset();
