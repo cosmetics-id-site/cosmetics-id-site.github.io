@@ -1,53 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Glamary</title>
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamary | Video</title>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-   
+    
 <div class="container">
 
-   <div class="main-video-container">
-      <video src="images/Glamary.mp4" loop controls class="main-video" controls controlsList="nodownload"></video>
-      <h3 class="main-vid-title">Welcome</h3>
-   </div>
+    <div class="video-links-container">
+        <a href="images/Glamary.mp4" class="video-links">01. Welcome</a>
+        <a href="images/Glamary Video.mp4" class="video-links">02. New Video</a>
+    </div>
 
-   <div class="video-list-container">
-
-      <div class="list active">
-         <h3 class="list-title">1 Video</h3>
-      </div>
-
-      <div class="list">
-         <video src="images/Glamary.mp4" class="list-video"></video>
-         <h3 class="list-title">Welcome</h3>
-      </div>
-
-   </div>
+    <div class="video-container">
+        <video src="images/Glamary.mp4" loop muted controls controlsList="nodownload" class="video"></video>
+    </div>
 
 </div>
 
+<script>
 
+document.querySelectorAll('.video-links').forEach(links =>{
+    links.addEventListener('click', (e) =>{
+        e.preventDefault();
+        var src = links.getAttribute('href');
+        document.querySelector('.video').src = src;
+        document.querySelector('.video').play();
+    });
+});
 
-
-
-
-
-
-
-
-
-
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+</script>
 
 </body>
 </html>
