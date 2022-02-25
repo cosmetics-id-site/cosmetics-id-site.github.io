@@ -45,23 +45,23 @@
 [ End table content ]
 ======================================*/
 
-(function($) {
-  "use strict";
+(function ($) {
+    "use strict";
 
-    jQuery(document).ready(function(){
-      
+    jQuery(document).ready(function () {
+
         /* --------------------------------------------------------
             1. Variables
         --------------------------------------------------------- */
         var $window = $(window),
-        $body = $('body');
+            $body = $('body');
 
         /* --------------------------------------------------------
             2. Mobile Menu
         --------------------------------------------------------- */
-         /* ---------------------------------
-            Utilize Function 
-        ----------------------------------- */
+        /* ---------------------------------
+           Utilize Function 
+       ----------------------------------- */
         (function () {
             var $ltn__utilizeToggle = $('.ltn__utilize-toggle'),
                 $ltn__utilize = $('.ltn__utilize'),
@@ -121,13 +121,13 @@
         /* --------------------------------------------------------
             3. Mega Menu
         --------------------------------------------------------- */
-        $('.mega-menu').each(function(){
-            if($(this).children('li').length){
+        $('.mega-menu').each(function () {
+            if ($(this).children('li').length) {
                 var ulChildren = $(this).children('li').length;
-                $(this).addClass('column-'+ulChildren)
+                $(this).addClass('column-' + ulChildren)
             }
         });
-        
+
 
         /* Remove Attribute( href ) from sub-menu title in mega-menu */
         /*
@@ -138,11 +138,11 @@
         /* Mega Munu  */
         // $(".mega-menu").parent().css({"position": "inherit"});
         $(".mega-menu").parent().addClass("mega-menu-parent");
-        
+
 
         /* Add space for Elementor Menu Anchor link */
-        $( window ).on( 'elementor/frontend/init', function() {
-            elementorFrontend.hooks.addFilter( 'frontend/handlers/menu_anchor/scroll_top_distance', function( scrollTop ) {
+        $(window).on('elementor/frontend/init', function () {
+            elementorFrontend.hooks.addFilter('frontend/handlers/menu_anchor/scroll_top_distance', function (scrollTop) {
                 return scrollTop - 75;
             });
         });
@@ -151,45 +151,45 @@
             3-2. Category Menu
         --------------------------------------------------------- */
 
-        $('.ltn__category-menu-title').on('click', function(){
+        $('.ltn__category-menu-title').on('click', function () {
             $('.ltn__category-menu-toggle').slideToggle(500);
-        });	
+        });
 
         /* Category Menu More Item show */
-        $('.ltn__category-menu-more-item-parent').on('click', function(){
+        $('.ltn__category-menu-more-item-parent').on('click', function () {
             $('.ltn__category-menu-more-item-child').slideToggle();
             $(this).toggleClass('rx-change');
 
         });
 
         /* Category Submenu Column Count */
-        $('.ltn__category-submenu').each(function(){
-            if($(this).children('li').length){
+        $('.ltn__category-submenu').each(function () {
+            if ($(this).children('li').length) {
                 var ulChildren = $(this).children('li').length;
-                $(this).addClass('ltn__category-column-no-'+ulChildren)
+                $(this).addClass('ltn__category-column-no-' + ulChildren)
             }
         });
 
         /* Category Menu Responsive */
-        function ltn__CategoryMenuToggle(){
-            $('.ltn__category-menu-toggle .ltn__category-menu-drop > a').on('click', function(){
-            if($(window).width() < 991){
-                $(this).removeAttr('href');
-                var element = $(this).parent('li');
-                if (element.hasClass('open')) {
-                    element.removeClass('open');
-                    element.find('li').removeClass('open');
-                    element.find('ul').slideUp();
+        function ltn__CategoryMenuToggle() {
+            $('.ltn__category-menu-toggle .ltn__category-menu-drop > a').on('click', function () {
+                if ($(window).width() < 991) {
+                    $(this).removeAttr('href');
+                    var element = $(this).parent('li');
+                    if (element.hasClass('open')) {
+                        element.removeClass('open');
+                        element.find('li').removeClass('open');
+                        element.find('ul').slideUp();
+                    }
+                    else {
+                        element.addClass('open');
+                        element.children('ul').slideDown();
+                        element.siblings('li').children('ul').slideUp();
+                        element.siblings('li').removeClass('open');
+                        element.siblings('li').find('li').removeClass('open');
+                        element.siblings('li').find('ul').slideUp();
+                    }
                 }
-                else {
-                    element.addClass('open');
-                    element.children('ul').slideDown();
-                    element.siblings('li').children('ul').slideUp();
-                    element.siblings('li').removeClass('open');
-                    element.siblings('li').find('li').removeClass('open');
-                    element.siblings('li').find('ul').slideUp();
-                }
-            }
             });
             $('.ltn__category-menu-toggle .ltn__category-menu-drop > a').append('<span class="expand"></span>');
         }
@@ -200,8 +200,8 @@
             4. One Page Navigation ( jQuery Easing Plugin )
         --------------------------------------------------------- */
         // jQuery for page scrolling feature - requires jQuery Easing plugin
-        $(function() {
-            $('a.page-scroll').bind('click', function(event) {
+        $(function () {
+            $('a.page-scroll').bind('click', function (event) {
                 var $anchor = $(this);
                 $('html, body').stop().animate({
                     scrollTop: $($anchor.attr('href')).offset().top
@@ -215,7 +215,7 @@
             5. Toogle Search
         -------------------------------------------------------- */
         // Handle click on toggle search button
-        $('.header-search-1').on('click', function() {
+        $('.header-search-1').on('click', function () {
             $('.header-search-1, .header-search-1-form').toggleClass('search-open');
             return false;
         });
@@ -231,10 +231,10 @@
             7. Background Image
         --------------------------------------------------------- */
         var $backgroundImage = $('.bg-image, .bg-image-top');
-        $backgroundImage.each(function() {
+        $backgroundImage.each(function () {
             var $this = $(this),
                 $bgImage = $this.data('bg');
-            $this.css('background-image', 'url('+$bgImage+')');
+            $this.css('background-image', 'url(' + $bgImage + ')');
         });
 
 
@@ -255,12 +255,12 @@
         --------------------------------------------------------- */
         $('select').niceSelect();
 
-        
+
         /* --------------------------------------------------------
             11. Default active and hover item active
         --------------------------------------------------------- */
         var ltn__active_item = $('.ltn__feature-item-6, .ltn__our-journey-wrap ul li, .ltn__pricing-plan-item')
-        ltn__active_item.mouseover(function() {
+        ltn__active_item.mouseover(function () {
             ltn__active_item.removeClass('active');
             $(this).addClass('active');
         });
@@ -308,14 +308,14 @@
                 }
             ]
         });
-                        
+
         /* --------------------------------------------------------
             13. Isotope Gallery Active  ( Gallery / Portfolio )
         -------------------------------------------------------- */
         var $ltnGalleryActive = $('.ltn__gallery-active'),
             $ltnGalleryFilterMenu = $('.ltn__gallery-filter-menu');
         /*Filter*/
-        $ltnGalleryFilterMenu.on( 'click', 'button, a', function() {
+        $ltnGalleryFilterMenu.on('click', 'button, a', function () {
             var $this = $(this),
                 $filterValue = $this.attr('data-filter');
             $ltnGalleryFilterMenu.find('button, a').removeClass('active');
@@ -323,10 +323,10 @@
             $ltnGalleryActive.isotope({ filter: $filterValue });
         });
         /*Grid*/
-        $ltnGalleryActive.each(function(){
+        $ltnGalleryActive.each(function () {
             var $this = $(this),
                 $galleryFilterItem = '.ltn__gallery-item';
-            $this.imagesLoaded( function() {
+            $this.imagesLoaded(function () {
                 $this.isotope({
                     itemSelector: $galleryFilterItem,
                     percentPosition: true,
@@ -372,7 +372,7 @@
                     }
                 }
             ]
-        }).on('afterChange', function(){
+        }).on('afterChange', function () {
             new WOW().init();
         });
 
@@ -401,7 +401,7 @@
                     }
                 }
             ]
-        }).on('afterChange', function(){
+        }).on('afterChange', function () {
             new WOW().init();
         });
 
@@ -1085,7 +1085,7 @@
         /* --------------------------------------------------------
             27. Brand Logo
         --------------------------------------------------------- */
-        if($('.ltn__brand-logo-active').length){
+        if ($('.ltn__brand-logo-active').length) {
             $('.ltn__brand-logo-active').slick({
                 rtl: false,
                 arrows: false,
@@ -1126,7 +1126,7 @@
         /* --------------------------------------------------------
             28. Blog Gallery (Blog Page )
         --------------------------------------------------------- */
-        if($('.ltn__blog-gallery-active').length){
+        if ($('.ltn__blog-gallery-active').length) {
             $('.ltn__blog-gallery-active').slick({
                 rtl: false,
                 arrows: true,
@@ -1166,17 +1166,17 @@
         // $('.ltn__counter').counterUp();
 
         $('.counter').counterUp({
-          delay: 10,
-          time: 2000
+            delay: 10,
+            time: 2000
         });
-        $('.counter').addClass('animated fadeInDownBig');  
+        $('.counter').addClass('animated fadeInDownBig');
         $('h3').addClass('animated fadeIn');
-        
+
 
         /* --------------------------------------------------------
             31. Instagram Feed
         --------------------------------------------------------- */
-        if($('.ltn__instafeed').length){
+        if ($('.ltn__instafeed').length) {
             $.instagramFeed({
                 'username': 'envato',
                 'container': ".ltn__instafeed",
@@ -1243,17 +1243,17 @@
         /* ---------------------------------------------------------
             32. Price Slider
         --------------------------------------------------------- */
-        $( ".slider-range" ).slider({
+        $(".slider-range").slider({
             range: true,
             min: 50,
             max: 5000,
-            values: [ 50, 1500 ],
-            slide: function( event, ui ) {
-                $( ".amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            values: [50, 1500],
+            slide: function (event, ui) {
+                $(".amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             }
         });
-        $( ".amount" ).val( "$" + $( ".slider-range" ).slider( "values", 0 ) +
-        " - $" + $( ".slider-range" ).slider( "values", 1 ) ); 
+        $(".amount").val("$" + $(".slider-range").slider("values", 0) +
+            " - $" + $(".slider-range").slider("values", 1));
 
 
         /* --------------------------------------------------------
@@ -1261,16 +1261,16 @@
         -------------------------------------------------------- */
         $(".cart-plus-minus").prepend('<div class="dec qtybutton">-</div>');
         $(".cart-plus-minus").append('<div class="inc qtybutton">+</div>');
-        $(".qtybutton").on("click", function() {
+        $(".qtybutton").on("click", function () {
             var $button = $(this);
             var oldValue = $button.parent().find("input").val();
             if ($button.text() == "+") {
                 var newVal = parseFloat(oldValue) + 1;
-            } 
+            }
             else {
                 if (oldValue > 0) {
                     var newVal = parseFloat(oldValue) - 1;
-                } 
+                }
                 else {
                     newVal = 0;
                 }
@@ -1279,7 +1279,7 @@
         });
 
 
-	    /* --------------------------------------------------------
+        /* --------------------------------------------------------
             34. scrollUp active
         -------------------------------------------------------- */
         $.scrollUp({
@@ -1290,19 +1290,19 @@
         });
 
 
-	    /* --------------------------------------------------------
+        /* --------------------------------------------------------
             35. Parallax active ( About Section  )
         -------------------------------------------------------- */
         /* 
         > 1 page e 2 ta call korle 1 ta kaj kore 
         */
-        if($('.ltn__parallax-effect-active').length){
+        if ($('.ltn__parallax-effect-active').length) {
             var scene = $('.ltn__parallax-effect-active').get(0);
             var parallaxInstance = new Parallax(scene);
         }
 
 
-	    /* --------------------------------------------------------
+        /* --------------------------------------------------------
             36. Testimonial Slider 4
         -------------------------------------------------------- */
         var ltn__testimonial_quote_slider = $('.ltn__testimonial-slider-4-active');
@@ -1418,21 +1418,21 @@
     /* --------------------------------------------------------
         36. Header menu sticky
     -------------------------------------------------------- */
-    $(window).on('scroll',function() {    
+    $(window).on('scroll', function () {
         var scroll = $(window).scrollTop();
         if (scroll < 445) {
             $(".ltn__header-sticky").removeClass("sticky-active");
         } else {
             $(".ltn__header-sticky").addClass("sticky-active");
         }
-    }); 
+    });
 
 
-    $(window).on('load',function(){
+    $(window).on('load', function () {
         /*-----------------
             preloader
         ------------------*/
-        if($('#preloader').length){
+        if ($('#preloader').length) {
             var preLoder = $("#preloader");
             preLoder.fadeOut(1000);
 
@@ -1442,30 +1442,30 @@
     });
 
 
-  
+
 })(jQuery);
 
 let toggles = document.getElementsByClassName('toggle');
 let contentDiv = document.getElementsByClassName('content');
 let icons = document.getElementsByClassName('icon');
 
-for(let i=0; i<toggles.length; i++){
-    toggles[i].addEventListener('click', ()=>{
-        if( parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight){
+for (let i = 0; i < toggles.length; i++) {
+    toggles[i].addEventListener('click', () => {
+        if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
             contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
             toggles[i].style.color = "#0084e9";
             icons[i].classList.remove('fa-plus');
             icons[i].classList.add('fa-minus');
         }
-        else{
+        else {
             contentDiv[i].style.height = "0px";
             toggles[i].style.color = "#111130";
             icons[i].classList.remove('fa-minus');
             icons[i].classList.add('fa-plus');
         }
 
-        for(let j=0; j<contentDiv.length; j++){
-            if(j!==i){
+        for (let j = 0; j < contentDiv.length; j++) {
+            if (j !== i) {
                 contentDiv[j].style.height = "0px";
                 toggles[j].style.color = "#111130";
                 icons[j].classList.remove('fa-minus');
@@ -1476,94 +1476,72 @@ for(let i=0; i<toggles.length; i++){
 }
 
 
- /*-----------------
-            Share Copy
-        ------------------*/
-const copyBtn = document.querySelector(".copy-btn");
-        const textarea = document.querySelector("textarea");
-    
-        copyBtn.addEventListener("click", () => {
-          textarea.select();
-          document.execCommand("copy");
-          copyBtn.innerHTML = "<i class='fas fa-check'></i>";
-          copyBtn.style.background = "#2DCDA7";
-          copyBtn.style.color = "#fff";
-    
-          setTimeout(() => {
-            document.getSelection().removeAllRanges();
-            copyBtn.innerHTML = "<i class='fas fa-copy'></i>";
-            copyBtn.style.background = "";
-            copyBtn.style.color = "";
-          }, 5000);
-        });
+
+/*-----------------
+    Popup
+------------------*/
+const popupScreen = document.querySelector(".popup-screen");
+const popupBox = document.querySelector(".popup-box");
+const closeBtn = document.querySelector(".close-btn");
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        popupScreen.classList.add("active");
+    }, 2000); //Popup the screen in 02 seconds after the page is loaded.
+});
+
+closeBtn.addEventListener("click", () => {
+    popupScreen.classList.remove("active"); //Close the popup screen on click the close button.
+    //Create a cookie for a day (to expire within a day) on click the close button.
+    document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; //1 day = 24 hours = 24*60*60
+});
+
+//Use the created cookie to hide or show the popup screen.
+const WebsiteCookie = document.cookie.indexOf("WebsiteName=");
+
+if (WebsiteCookie != -1) {
+    popupScreen.style.display = "none"; //Hide the popup screen if the cookie is not expired.
+}
+else {
+    popupScreen.style.display = "flex"; //Show the popup screen if the cookie is expired.
+}
 
 
 
-        /*-----------------
-            Popup
-        ------------------*/
-        const popupScreen = document.querySelector(".popup-screen");
-        const popupBox = document.querySelector(".popup-box");
-        const closeBtn = document.querySelector(".close-btn");
-    
-        window.addEventListener("load", () => {
-          setTimeout(() => {
-            popupScreen.classList.add("active");
-          }, 2000); //Popup the screen in 02 seconds after the page is loaded.
-        });
-    
-        closeBtn.addEventListener("click", () => {
-          popupScreen.classList.remove("active"); //Close the popup screen on click the close button.
-          //Create a cookie for a day (to expire within a day) on click the close button.
-          document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; //1 day = 24 hours = 24*60*60
-        });
-    
-        //Use the created cookie to hide or show the popup screen.
-        const WebsiteCookie = document.cookie.indexOf("WebsiteName=");
-    
-        if(WebsiteCookie != -1){
-          popupScreen.style.display = "none"; //Hide the popup screen if the cookie is not expired.
-        }
-        else{
-          popupScreen.style.display = "flex"; //Show the popup screen if the cookie is expired.
-        }
-        
+function ShowToast() {
+    var sToast = document.getElementById('toast_container');
+    sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
 
+    var mToast = document.getElementById('toast_message');
+    mToast.innerHTML = "Halaman EN Belum Tersedia";
 
-        function ShowToast() {
-            var sToast = document.getElementById('toast_container');
-            sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
-        
-            var mToast = document.getElementById('toast_message');
-            mToast.innerHTML = "Halaman EN Belum Tersedia";
-        
-            setTimeout(HideToast, 5000);
-        }
-        
-        function ShowToastTwo() {
-            var sToast = document.getElementById('toast_container');
-            sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
-        
-            var mToast = document.getElementById('toast_message');
-            mToast.innerHTML = "Tampilan Ini Segera Hadir";
-        
-            setTimeout(HideToast, 5000);
-        }
-        
-        function ShowPremium() {
-            var sToast = document.getElementById('toast_container');
-            sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
-        
-            var mToast = document.getElementById('toast_message');
-            mToast.innerHTML = "Paket Premium Belum Tersedia";
-        
-            setTimeout(HideToast, 5000);
-        }
-        
-        function HideToast() {
-            var sToast = document.getElementById('toast_container');
-            sToast.setAttribute('style', 'visibility:hidden; animation:animation_toast 5s linear 1;');
-        
-            var mToast = document.getElementById('toast_message');
-            mToast.innerHTML = "This is a toast message";
-        }
+    setTimeout(HideToast, 5000);
+}
+
+function ShowToastTwo() {
+    var sToast = document.getElementById('toast_container');
+    sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+
+    var mToast = document.getElementById('toast_message');
+    mToast.innerHTML = "Tampilan Ini Segera Hadir";
+
+    setTimeout(HideToast, 5000);
+}
+
+function ShowPremium() {
+    var sToast = document.getElementById('toast_container');
+    sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+
+    var mToast = document.getElementById('toast_message');
+    mToast.innerHTML = "Paket Premium Belum Tersedia";
+
+    setTimeout(HideToast, 5000);
+}
+
+function HideToast() {
+    var sToast = document.getElementById('toast_container');
+    sToast.setAttribute('style', 'visibility:hidden; animation:animation_toast 5s linear 1;');
+
+    var mToast = document.getElementById('toast_message');
+    mToast.innerHTML = "This is a toast message";
+}
